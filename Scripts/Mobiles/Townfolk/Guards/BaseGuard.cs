@@ -2,7 +2,7 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-    public abstract class BaseGuard : Mobile
+    public abstract class BaseGuard : BaseConvo
 	{
 		public static void Spawn( Mobile caller, Mobile target )
 		{

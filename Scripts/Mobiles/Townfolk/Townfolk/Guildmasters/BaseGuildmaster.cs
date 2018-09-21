@@ -10,6 +10,13 @@ namespace Server.Mobiles
 		private List<SBInfo> m_SBInfos = new List<SBInfo>();
 		protected override List<SBInfo> SBInfos{ get { return m_SBInfos; } }
 
+		protected override void GetConvoFragments(ArrayList list)
+		{
+			list.Add( JobFragment.master );
+			base.GetConvoFragments (list);
+			list.Remove( JobFragment.shopkeep );
+		}
+		
 		public override bool IsActiveVendor{ get{ return false; } }
 
 		public override bool ClickTitle{ get{ return false; } }

@@ -6,7 +6,7 @@ using EDI = Server.Mobiles.EscortDestinationInfo;
 
 namespace Server.Mobiles
 {
-    public class BaseEscortable : BaseCreature
+    public class BaseEscortable : BaseConvo
 	{
 		public static readonly TimeSpan EscortDelay = TimeSpan.FromMinutes( 5.0 );
 		public static readonly TimeSpan AbandonDelay = TimeSpan.FromMinutes( 2.0 );
