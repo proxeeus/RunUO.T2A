@@ -13,7 +13,7 @@ namespace Server.Regions
 		private bool m_Disabled;
 
 		public bool Disabled{ get{ return m_Disabled; } set{ m_Disabled = value; } }
-
+		public virtual RegionFragment Fragment { get { return RegionFragment.Wilderness; } }
 		public virtual bool IsDisabled()
 		{
 			return m_Disabled;
