@@ -28,8 +28,9 @@ namespace Server.Mobiles
 				{
 					att.Add( Enum.Parse( typeof( Attitude ), tok, true ) );
 				}
-				catch
+				catch(Exception ex)
 				{
+					Console.WriteLine(ex.Message);
 				}
 			}
 
@@ -47,26 +48,55 @@ namespace Server.Mobiles
 		public string GetString( BaseConvo npc, Mobile pc )
 		{
 			Attitude test = npc.Attitude;
-			while ( true )
-			{
-				for(int i=0;i<m_Atts.Length;i++)
-				{
-					if ( m_Atts[i] == test )
-					{
-						string str = null;
-						for(int s=0;s<m_Strings.Length && str == null;s++)
-							str = m_Strings[s].GetString( npc, pc );
-						return str;
-					}
-				}
 
-				if ( test < Attitude.Neutral )
-					test = (Attitude)( ((int)test) + 1 );
-				else if ( test > Attitude.Neutral )
-					test = (Attitude)( ((int)test) - 1 );
-				else
-					break;
+			for(int i=0;i<m_Atts.Length;i++)
+			{
+				if ( m_Atts[i] == test )
+				{
+					string str = null;
+					for(int s=0;s<m_Strings.Length && str == null;s++)
+						str = m_Strings[s].GetString( npc, pc );
+					return str;
+				}
 			}
+
+			// If we're here, it means that no corresponding attitude phrase has been found.
+			// What happens when no matching Attitude is found? There's a generic npc response.
+			// So basically, we'll find a pseudo "closest" attitude to use.
+			//If Belligerent -> go to Random(Wicked, Neutral)
+			// If Kindly -> go to Random(Neutral, Goodhearted)
+			// Then retry.
+			Attitude closeAttitude;
+			int result = -1;
+			int index = -1;
+			Random rnd = new Random();
+			if(test == Attitude.Belligerent)
+			{
+				int[] attitudes = { 0, 2 };
+				index = rnd.Next(attitudes.Length);
+				result = attitudes[index];
+				Console.WriteLine(result);
+			}
+			else if(test == Attitude.Kindly)
+			{
+				int[] attitudes = { 2, 4 };
+				index = rnd.Next(attitudes.Length);
+				result = attitudes[index];
+			}
+			
+			closeAttitude = (Attitude)result;
+			
+			for(int i=0;i<m_Atts.Length;i++)
+			{
+				if ( m_Atts[i] == closeAttitude )
+				{
+					string str = null;
+					for(int s=0;s<m_Strings.Length && str == null;s++)
+						str = m_Strings[s].GetString( npc, pc );
+					return str;
+				}
+			}
+			
 			return null;
 		}
 	}
@@ -466,7 +496,7 @@ namespace Server.Mobiles
 					}
 					catch
 					{
-						//Console.WriteLine( "Fragment : Error, invalid Sophistication {0}", level );
+						Console.WriteLine( "Fragment : Error, invalid Sophistication {0}", level );
 						continue;
 					}
 
@@ -482,7 +512,7 @@ namespace Server.Mobiles
 				}
 				else if ( tok != "{" && tok != "}" )
 				{
-					//Console.WriteLine( "Fragment : Unknown token '{0}'", tok );
+					Console.WriteLine( "Fragment : Unknown token '{0}'", tok );
 				}
 			}
 		}
@@ -661,7 +691,7 @@ namespace Server.Mobiles
 
 		public static void Configure() 
 		{
-			Console.Write( "Loading convo fragments... " );
+			Console.Write( "Loading Convo Fragments... " );
 
 			m_Frg[DefaultFragment] = LoadFrg( "bdefault.frg" );
 			m_Frg[BritanniaFragment] = LoadFrg( "britanni.frg" );
@@ -887,7 +917,6 @@ namespace Server.Mobiles
 				}
 				else
 				{
-					DebugSay( "I'm conversing with them!" );
 					m_List.Clear();
 					if ( m_Job != JobFragment.None )
 						m_List.Add( (int)m_Job );
@@ -905,6 +934,7 @@ namespace Server.Mobiles
 					if ( str == null )
 					{
 						Fragment f = (Fragment)m_Frg[EndFragment];
+						Console.WriteLine(string.Format("Ligne 921 on a Fragment: {0}.", f));
 						if ( f != null )
 							str = f.GetString( this, pc, said );
 
@@ -1048,6 +1078,9 @@ namespace Server.Mobiles
 		tanner,
 		mapmaker,
 		banker,
+		provisioner,
+		scribe,
+		tavernkeeper,
 
 		_End,
 	}
