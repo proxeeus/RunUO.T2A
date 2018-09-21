@@ -1,5 +1,6 @@
 using Server.Items;
 
+
 namespace Server.Mobiles
 {
     public abstract class BaseGuard : BaseConvo
@@ -37,8 +38,10 @@ namespace Server.Mobiles
 				caller.Region.MakeGuard( target );
 		}
 
-		public BaseGuard( Mobile target )
+		public BaseGuard( Mobile target ): base( AIType.AI_Melee, FightMode.Aggressor, 14, 1, 0.2, 1.0 )
 		{
+			Title = "the guard";
+			Job = JobFragment.guard;
 			if ( target != null )
 			{
 				Location = target.Location;
