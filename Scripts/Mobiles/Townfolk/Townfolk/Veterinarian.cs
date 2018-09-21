@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Veterinarian() : base( "the vet" )
 		{
+			Job = JobFragment.vet;
 			SetSkill( SkillName.AnimalLore, 85.0, 100.0 );
 			SetSkill( SkillName.Veterinary, 90.0, 100.0 );
 		}

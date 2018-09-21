@@ -13,6 +13,7 @@ namespace Server.Mobiles
         [Constructable]
         public Banker() : base("the banker")
         {
+			Job = JobFragment.banker;
         }
 
         public override void InitSBInfo()

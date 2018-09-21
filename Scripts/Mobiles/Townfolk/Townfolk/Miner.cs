@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Miner() : base( "the miner" )
 		{
+			Job = JobFragment.miner;
 			SetSkill( SkillName.Mining, 65.0, 88.0 );
 		}
 

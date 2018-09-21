@@ -12,6 +12,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Fisherman() : base( "the fisher" )
 		{
+			Job = JobFragment.fisher;
 			SetSkill( SkillName.Fishing, 75.0, 98.0 );
 		}
 

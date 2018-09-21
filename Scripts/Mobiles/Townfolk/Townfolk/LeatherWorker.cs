@@ -9,7 +9,8 @@ namespace Server.Mobiles
 
 		[Constructable]
 		public LeatherWorker() : base( "the leather worker" ) 
-		{ 
+		{
+			Job = JobFragment.tanner;
 		} 
 		public override void InitSBInfo() 
 		{ 

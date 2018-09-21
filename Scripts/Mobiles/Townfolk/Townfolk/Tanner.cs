@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Tanner() : base( "the tanner" )
 		{
+			Job = JobFragment.tanner;
 			SetSkill( SkillName.Tailoring, 36.0, 68.0 );
 		}
 

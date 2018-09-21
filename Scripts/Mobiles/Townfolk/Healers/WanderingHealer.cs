@@ -22,7 +22,7 @@ namespace Server.Mobiles
 		public WanderingHealer()
 		{
 			Title = "the wandering healer";
-
+			Job = JobFragment.healer;
 			AddItem( new GnarledStaff() );
 
 			SetSkill( SkillName.Camping, 80.0, 100.0 );

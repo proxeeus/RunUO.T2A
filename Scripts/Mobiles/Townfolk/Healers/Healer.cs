@@ -19,7 +19,7 @@ namespace Server.Mobiles
 		public Healer()
 		{
 			Title = "the healer";
-
+			Job = JobFragment.healer;
 			SetSkill( SkillName.Forensics, 80.0, 100.0 );
 			SetSkill( SkillName.SpiritSpeak, 80.0, 100.0 );
 			SetSkill( SkillName.Swords, 80.0, 100.0 );

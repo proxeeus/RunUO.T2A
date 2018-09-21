@@ -12,6 +12,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Carpenter() : base( "the carpenter" )
 		{
+			Job = JobFragment.carpenter;
 			SetSkill( SkillName.Carpentry, 85.0, 100.0 );
 			SetSkill( SkillName.Lumberjacking, 60.0, 83.0 );
 		}

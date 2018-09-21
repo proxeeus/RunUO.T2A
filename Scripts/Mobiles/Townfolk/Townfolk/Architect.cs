@@ -12,6 +12,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Architect() : base( "the architect" )
 		{
+			Job = JobFragment.architect;
 		}
 
 		public override void InitSBInfo()

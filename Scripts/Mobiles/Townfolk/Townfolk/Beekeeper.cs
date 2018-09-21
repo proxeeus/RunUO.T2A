@@ -9,7 +9,8 @@ namespace Server.Mobiles
 
 		[Constructable]
 		public Beekeeper() : base( "the beekeeper" ) 
-		{ 
+		{
+			Job = JobFragment.beekeeper;
 		} 
 
 		public override void InitSBInfo() 

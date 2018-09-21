@@ -12,6 +12,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Weaver() : base( "the weaver" )
 		{
+			Job = JobFragment.weaver;
 			SetSkill( SkillName.Tailoring, 65.0, 88.0 );
 		}
 

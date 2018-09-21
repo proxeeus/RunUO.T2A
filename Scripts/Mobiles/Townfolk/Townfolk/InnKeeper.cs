@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public InnKeeper() : base( "the innkeeper" ) 
 		{ 
+			Job = JobFragment.innkeeper;
 		} 
 
 		public override void InitSBInfo() 

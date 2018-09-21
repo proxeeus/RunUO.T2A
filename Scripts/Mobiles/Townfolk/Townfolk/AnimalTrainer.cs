@@ -15,6 +15,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public AnimalTrainer() : base( "the animal trainer" )
 		{
+			Job = JobFragment.animal;
 			SetSkill( SkillName.AnimalLore, 64.0, 100.0 );
 			SetSkill( SkillName.AnimalTaming, 90.0, 100.0 );
 			SetSkill( SkillName.Veterinary, 65.0, 88.0 );

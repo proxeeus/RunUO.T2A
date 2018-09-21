@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Mapmaker() : base( "the mapmaker" )
 		{
+			Job = JobFragment.mapmaker;
 			SetSkill( SkillName.Cartography, 90.0, 100.0 );
 		}
 

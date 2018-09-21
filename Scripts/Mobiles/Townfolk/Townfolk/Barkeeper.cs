@@ -25,6 +25,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Barkeeper() : base( "the barkeeper" )
 		{
+			Job = JobFragment.innkeeper;
 		}
 
 		public Barkeeper( Serial serial ) : base( serial )

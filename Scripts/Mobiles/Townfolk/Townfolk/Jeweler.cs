@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Jeweler() : base( "the jeweler" )
 		{
+			Job = JobFragment.jeweler;
 			SetSkill( SkillName.ItemID, 64.0, 100.0 );
 		}
 

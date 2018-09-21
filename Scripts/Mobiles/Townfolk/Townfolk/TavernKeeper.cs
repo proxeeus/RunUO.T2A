@@ -9,7 +9,8 @@ namespace Server.Mobiles
 
 		[Constructable]
 		public TavernKeeper() : base( "the tavern keeper" ) 
-		{ 
+		{
+			Job = JobFragment.tavernkeeper;
 		} 
 
 		public override void InitSBInfo() 

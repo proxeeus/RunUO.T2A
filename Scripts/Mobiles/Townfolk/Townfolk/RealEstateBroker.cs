@@ -15,6 +15,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public RealEstateBroker() : base( "the real estate broker" )
 		{
+			Job = JobFragment.realtor;
 		}
 
 		public override bool HandlesOnSpeech( Mobile from )

@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Waiter() : base( "the waiter" )
 		{
+			Job = JobFragment.waiter;
 			SetSkill( SkillName.Discordance, 36.0, 68.0 );
 		}
 

@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Cobbler() : base( "the cobbler" ) 
 		{ 
+			Job = JobFragment.cobbler;
 			SetSkill( SkillName.Tailoring, 60.0, 83.0 );
 		} 
 

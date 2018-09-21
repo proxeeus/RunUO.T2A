@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Farmer() : base( "the farmer" )
 		{
+			Job = JobFragment.farmer;
 			SetSkill( SkillName.Lumberjacking, 36.0, 68.0 );
 			SetSkill( SkillName.TasteID, 36.0, 68.0 );
 			SetSkill( SkillName.Cooking, 36.0, 68.0 );

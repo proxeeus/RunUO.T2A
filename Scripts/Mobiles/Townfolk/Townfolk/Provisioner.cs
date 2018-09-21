@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Provisioner() : base( "the provisioner" )
 		{
+			Job = JobFragment.provisioner;
 			SetSkill( SkillName.Camping, 45.0, 68.0 );
 			SetSkill( SkillName.Tactics, 45.0, 68.0 );
 		}

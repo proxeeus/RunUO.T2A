@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Thief() : base( "the thief" )
 		{
+			Job = JobFragment.thief;
 			SetSkill( SkillName.Camping, 55.0, 78.0 );
 			SetSkill( SkillName.DetectHidden, 65.0, 88.0 );
 			SetSkill( SkillName.Hiding, 45.0, 68.0 );

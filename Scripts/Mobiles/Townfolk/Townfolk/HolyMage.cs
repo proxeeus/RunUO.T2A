@@ -11,6 +11,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public HolyMage() : base( "the Holy Mage" )
 		{
+			Job = JobFragment.mage;
 			SetSkill( SkillName.EvalInt, 65.0, 88.0 );
 			SetSkill( SkillName.Inscribe, 60.0, 83.0 );
 			SetSkill( SkillName.Magery, 64.0, 100.0 );

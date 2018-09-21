@@ -10,6 +10,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Weaponsmith() : base( "the weaponsmith" )
 		{
+			Job = JobFragment.weaponsmith;
 			SetSkill( SkillName.ArmsLore, 64.0, 100.0 );
 			SetSkill( SkillName.Blacksmith, 65.0, 88.0 );
 			SetSkill( SkillName.Fencing, 45.0, 68.0 );

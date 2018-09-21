@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Server.Items;
 using Server.Network;
 using Server.Regions;
+using Server.Mobiles;
 
 namespace Server.Mobiles
 {
@@ -16,7 +17,7 @@ namespace Server.Mobiles
 		ThighBoots
 	}
 
-	public abstract class BaseVendor : BaseCreature, IVendor
+	public abstract class BaseVendor : BaseConvo, IVendor
 	{
 		private const int MaxSell = 500;
 
@@ -41,6 +42,12 @@ namespace Server.Mobiles
 
 		public override bool ShowFameTitle { get { return false; } }
 
+		protected override void GetConvoFragments(ArrayList list)
+		{
+			list.Add( (int)JobFragment.shopkeep );
+			base.GetConvoFragments (list);
+		}
+		
 		public virtual void OnSuccessfulBulkOrderReceive( Mobile from )
 		{
 		}

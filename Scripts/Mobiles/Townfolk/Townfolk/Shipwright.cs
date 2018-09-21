@@ -9,7 +9,8 @@ namespace Server.Mobiles
 
 		[Constructable]
 		public Shipwright() : base( "the shipwright" ) 
-		{ 
+		{
+			Job = JobFragment.shipwright;			
 			SetSkill( SkillName.Carpentry, 60.0, 83.0 );
 			SetSkill( SkillName.Macing, 36.0, 68.0 );
 		} 

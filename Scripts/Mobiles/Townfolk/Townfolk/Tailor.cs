@@ -12,6 +12,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Tailor() : base( "the tailor" )
 		{
+			Job = JobFragment.tailor;
 			SetSkill( SkillName.Tailoring, 64.0, 100.0 );
 		}
 

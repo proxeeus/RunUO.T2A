@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Minter()
 		{
+			Job = JobFragment.minter;
 			Title = "the minter";
 		}
 

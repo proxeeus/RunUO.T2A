@@ -12,6 +12,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public Alchemist() : base( "the alchemist" )
 		{
+			Job = JobFragment.alchemist;
 			SetSkill( SkillName.Alchemy, 85.0, 100.0 );
 			SetSkill( SkillName.TasteID, 65.0, 88.0 );
 		}
