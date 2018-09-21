@@ -11,6 +11,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public BlacksmithGuildmaster() : base( "blacksmith" )
 		{
+			Job = JobFragment.blacksmith;
 			SetSkill( SkillName.ArmsLore, 65.0, 88.0 );
 			SetSkill( SkillName.Blacksmith, 90.0, 100.0 );
 			SetSkill( SkillName.Macing, 36.0, 68.0 );

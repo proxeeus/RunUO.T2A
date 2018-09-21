@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public TailorGuildmaster() : base( "tailor" )
 		{
+			Job = JobFragment.tailor;
 			SetSkill( SkillName.Tailoring, 90.0, 100.0 );
 		}
 

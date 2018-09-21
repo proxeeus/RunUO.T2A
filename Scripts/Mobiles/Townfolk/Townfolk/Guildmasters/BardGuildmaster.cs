@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public BardGuildmaster() : base( "bard" )
 		{
+			Job = JobFragment.bard;
 			SetSkill( SkillName.Archery, 80.0, 100.0 );
 			SetSkill( SkillName.Discordance, 80.0, 100.0 );
 			SetSkill( SkillName.Musicianship, 80.0, 100.0 );

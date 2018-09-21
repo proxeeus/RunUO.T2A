@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public WarriorGuildmaster() : base( "warrior" )
 		{
+			Job = JobFragment.fighter;
 			SetSkill( SkillName.ArmsLore, 75.0, 98.0 );
 			SetSkill( SkillName.Parry, 85.0, 100.0 );
 			SetSkill( SkillName.MagicResist, 60.0, 83.0 );

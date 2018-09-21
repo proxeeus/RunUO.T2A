@@ -12,6 +12,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public ThiefGuildmaster() : base( "thief" )
 		{
+			Job = JobFragment.thief;
 			SetSkill( SkillName.DetectHidden, 75.0, 98.0 );
 			SetSkill( SkillName.Hiding, 65.0, 88.0 );
 			SetSkill( SkillName.Lockpicking, 85.0, 100.0 );

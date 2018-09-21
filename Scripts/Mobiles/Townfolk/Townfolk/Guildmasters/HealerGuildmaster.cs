@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public HealerGuildmaster() : base( "healer" )
 		{
+			Job = JobFragment.healer;
 			SetSkill( SkillName.Anatomy, 85.0, 100.0 );
 			SetSkill( SkillName.Healing, 90.0, 100.0 );
 			SetSkill( SkillName.Forensics, 75.0, 98.0 );

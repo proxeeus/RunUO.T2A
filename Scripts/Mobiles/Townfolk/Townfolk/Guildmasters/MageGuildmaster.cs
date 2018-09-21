@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public MageGuildmaster() : base( "mage" )
 		{
+			Job = JobFragment.mage;
 			SetSkill( SkillName.EvalInt, 85.0, 100.0 );
 			SetSkill( SkillName.Inscribe, 65.0, 88.0 );
 			SetSkill( SkillName.MagicResist, 64.0, 100.0 );

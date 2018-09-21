@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public RangerGuildmaster() : base( "ranger" )
 		{
+			Job = JobFragment.ranger;
 			SetSkill( SkillName.AnimalLore, 64.0, 100.0 );
 			SetSkill( SkillName.Camping, 75.0, 98.0 );
 			SetSkill( SkillName.Hiding, 75.0, 98.0 );

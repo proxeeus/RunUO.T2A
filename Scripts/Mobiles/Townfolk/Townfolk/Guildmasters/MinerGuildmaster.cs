@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public MinerGuildmaster() : base( "miner" )
 		{
+			Job = JobFragment.miner;
 			SetSkill( SkillName.ItemID, 60.0, 83.0 );
 			SetSkill( SkillName.Mining, 90.0, 100.0 );
 		}

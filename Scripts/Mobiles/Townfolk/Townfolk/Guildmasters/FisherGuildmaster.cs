@@ -7,6 +7,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public FisherGuildmaster() : base( "fisher" )
 		{
+			Job = JobFragment.fisher;
 			SetSkill( SkillName.Fishing, 80.0, 100.0 );
 		}
 
