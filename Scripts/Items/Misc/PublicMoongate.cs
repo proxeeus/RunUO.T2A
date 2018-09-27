@@ -194,7 +194,7 @@ namespace Server.Items
                 {
                     new PMEntry( new Point3D( 1336, 1997, 5 ), "see a road to the east and mountains in the distance to the west." ), // Britain
                     new PMEntry( new Point3D( 4467, 1283, 5 ), "see a small escarpment to the south and a large city to the North." ), // Moonglow
-					new PMEntry( new Point3D( 3563, 2139, Map.Trammel.GetAverageZ( 3563, 2139 ) ), "see what appears to be a small peninsula covered in lush foliage." ), // Magincia
+					new PMEntry( new Point3D( 3563, 2139, Map.Felucca.GetAverageZ( 3563, 2139 ) ), "see what appears to be a small peninsula covered in lush foliage." ), // Magincia
 					new PMEntry( new Point3D(  643, 2067, 5 ), "see a small city to the south, while a vast ocean lies in all other directions." ), // Skara Brae
 					new PMEntry( new Point3D( 1828, 2948,-20), "see a large sandstone city standing on a far bank of the river to the north." ), // Trinsic
 					new PMEntry( new Point3D( 2701,  692, 5 ), "can just make out a road to the southwest and a river to the north." ), // Minoc
