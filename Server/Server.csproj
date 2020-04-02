@@ -48,6 +48,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
+
     <IntermediateOutputPath>C:\Users\Jérome\AppData\Local\Temp\vsF60A.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -61,6 +62,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
+
     <IntermediateOutputPath>C:\Users\Jérome\AppData\Local\Temp\vsF60A.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -85,7 +87,6 @@
     <Compile Include=".\Diagnostics\TargetProfile.cs" />
     <Compile Include=".\Diagnostics\TimerProfile.cs" />
     <Compile Include=".\Effects.cs" />
-    <Compile Include=".\EventLog.cs" />
     <Compile Include=".\EventSink.cs" />
     <Compile Include=".\ExpansionInfo.cs" />
     <Compile Include=".\Geometry.cs" />

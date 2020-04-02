@@ -100,11 +100,11 @@ namespace Server
 
 	public class Region : IComparable
 	{
-		private static List<Region> m_Regions = new List<Region>();
+        private static List<Region> m_Regions = new List<Region>();
 
-		public static List<Region> Regions{ get{ return m_Regions; } }
+        public static List<Region> Regions { get { return m_Regions; } }
 
-		public static Region Find( Point3D p, Map map )
+        public static Region Find( Point3D p, Map map )
 		{
 			if ( map == null )
 				return Map.Internal.DefaultRegion;
@@ -128,9 +128,6 @@ namespace Server
 
 		private static TimeSpan m_StaffLogoutDelay = TimeSpan.Zero;
 		private static TimeSpan m_DefaultLogoutDelay = TimeSpan.FromMinutes( 5.0 );
-
-		public static TimeSpan StaffLogoutDelay{ get{ return m_StaffLogoutDelay; } set{ m_StaffLogoutDelay = value; } }
-		public static TimeSpan DefaultLogoutDelay{ get{ return m_DefaultLogoutDelay; } set{ m_DefaultLogoutDelay = value; } }
 
 		public static readonly int DefaultPriority = 50;
 
@@ -172,13 +169,10 @@ namespace Server
 		public string Name{ get{ return m_Name; } }
 		public Map Map{ get{ return m_Map; } }
 		public Region Parent{ get{ return m_Parent; } }
-		public List<Region> Children{ get{ return m_Children; } }
 		public Rectangle3D[] Area{ get{ return m_Area; } }
-		public Sector[] Sectors{ get{ return m_Sectors; } }
 		public bool Dynamic{ get{ return m_Dynamic; } }
 		public int Priority{ get{ return m_Priority; } }
 		public int ChildLevel{ get{ return m_ChildLevel; } }
-		public bool Registered{ get{ return m_Registered; } }
 
 		public Point3D GoLocation{ get{ return m_GoLocation; } set { m_GoLocation = value; } }
 		public MusicName Music{ get{ return m_Music; } set{ m_Music = value; } }
@@ -400,49 +394,49 @@ namespace Server
 			return false;
 		}
 
-		public List<Mobile> GetPlayers()
-		{
-			List<Mobile> list = new List<Mobile>();
+        public List<Mobile> GetPlayers()
+        {
+            List<Mobile> list = new List<Mobile>();
 
-			if ( m_Sectors != null )
-			{
-				for ( int i = 0; i < m_Sectors.Length; i++ )
-				{
-					Sector sector = m_Sectors[i];
+            if (m_Sectors != null)
+            {
+                for (int i = 0; i < m_Sectors.Length; i++)
+                {
+                    Sector sector = m_Sectors[i];
 
-					foreach ( Mobile player in sector.Players )
-					{
-						if ( player.Region.IsPartOf( this ) )
-							list.Add( player );
-					}
-				}
-			}
+                    foreach (Mobile player in sector.Players)
+                    {
+                        if (player.Region.IsPartOf(this))
+                            list.Add(player);
+                    }
+                }
+            }
 
-			return list;
-		}
+            return list;
+        }
 
-		public int GetPlayerCount()
-		{
-			int count = 0;
+        public int GetPlayerCount()
+        {
+            int count = 0;
 
-			if ( m_Sectors != null )
-			{
-				for ( int i = 0; i < m_Sectors.Length; i++ )
-				{
-					Sector sector = m_Sectors[i];
+            if (m_Sectors != null)
+            {
+                for (int i = 0; i < m_Sectors.Length; i++)
+                {
+                    Sector sector = m_Sectors[i];
 
-					foreach ( Mobile player in sector.Players )
-					{
-						if ( player.Region.IsPartOf( this ) )
-							count++;
-					}
-				}
-			}
+                    foreach (Mobile player in sector.Players)
+                    {
+                        if (player.Region.IsPartOf(this))
+                            count++;
+                    }
+                }
+            }
 
-			return count;
-		}
+            return count;
+        }
 
-		public List<Mobile> GetMobiles()
+        public List<Mobile> GetMobiles()
 		{
 			List<Mobile> list = new List<Mobile>();
 
@@ -461,27 +455,6 @@ namespace Server
 			}
 
 			return list;
-		}
-
-		public int GetMobileCount()
-		{
-			int count = 0;
-
-			if ( m_Sectors != null )
-			{
-				for ( int i = 0; i < m_Sectors.Length; i++ )
-				{
-					Sector sector = m_Sectors[i];
-
-					foreach ( Mobile mobile in sector.Mobiles )
-					{
-						if ( mobile.Region.IsPartOf( this ) )
-							count++;
-					}
-				}
-			}
-
-			return count;
 		}
 
 		int IComparable.CompareTo( object obj )
