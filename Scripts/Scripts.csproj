@@ -44,7 +44,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
     <Prefer32Bit>false</Prefer32Bit>
-
     <IntermediateOutputPath>C:\Users\Jérome\AppData\Local\Temp\vsF6A7.tmp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -57,7 +56,6 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
-
     <IntermediateOutputPath>C:\Users\Jérome\AppData\Local\Temp\vsF6A7.tmp\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
@@ -375,7 +373,7 @@
     <Compile Include=".\Items\Armor\DaemonBone\DaemonChest.cs" />
     <Compile Include=".\Items\Armor\DaemonBone\DaemonGloves.cs" />
     <Compile Include=".\Items\Armor\DaemonBone\DaemonLegs.cs" />
-    <Compile Include="Commands\SpawnerDev.cs" />
+    <Compile Include="Commands\Spawn.cs" />
     <Compile Include="Engines\Factions %28Virtue Guards%29\Mobiles\BaseShieldGuard.cs" />
     <Compile Include="Engines\Factions %28Virtue Guards%29\Mobiles\ChaosGuard.cs" />
     <Compile Include="Engines\Factions %28Virtue Guards%29\Mobiles\OrderGuard.cs" />
@@ -1146,6 +1144,7 @@
     <Compile Include="Misc\CrashGuard.cs" />
     <Compile Include="Misc\CurrentExpansion.cs" />
     <Compile Include="Misc\DataPath.cs" />
+    <Compile Include="Mobiles\BaseConvo.cs" />
     <Compile Include="Spells\DispellableFieldAttribute.cs" />
     <Compile Include="Commands\DoorGenerator.cs" />
     <Compile Include="Misc\Email.cs" />
